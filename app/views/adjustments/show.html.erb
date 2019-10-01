@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ltv:</strong>
+  <%= @adjustment.ltv %>
+</p>
+
+<p>
+  <strong>Fico:</strong>
+  <%= @adjustment.fico %>
+</p>
+
+<%= link_to 'Edit', edit_adjustment_path(@adjustment) %> |
+<%= link_to 'Back', adjustments_path %>

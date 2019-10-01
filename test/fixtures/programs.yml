@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  loan_purpose: MyString
+  loan_size: MyString
+  loan_type: MyString
+  term: 1
+  interest_rate: 
+  lock_period: 1
+  fannie_mae: false
+  base_rate: 
+  adjustment_rate: 
+
+two:
+  loan_purpose: MyString
+  loan_size: MyString
+  loan_type: MyString
+  term: 1
+  interest_rate: 
+  lock_period: 1
+  fannie_mae: false
+  base_rate: 
+  adjustment_rate: 

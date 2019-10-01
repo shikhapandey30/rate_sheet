@@ -1,0 +1,62 @@
+<%= form_with(model: program, local: true) do |form| %>
+  <% if program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(program.errors.count, "error") %> prohibited this program from being saved:</h2>
+
+      <ul>
+      <% program.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :loan_purpose %>
+    <%= form.text_field :loan_purpose %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loan_size %>
+    <%= form.text_field :loan_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loan_type %>
+    <%= form.text_field :loan_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term %>
+    <%= form.number_field :term %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interest_rate %>
+    <%= form.text_field :interest_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lock_period %>
+    <%= form.number_field :lock_period %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fannie_mae %>
+    <%= form.check_box :fannie_mae %>
+  </div>
+
+  <div class="field">
+    <%= form.label :base_rate %>
+    <%= form.text_field :base_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adjustment_rate %>
+    <%= form.text_field :adjustment_rate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

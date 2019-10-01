@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Loan purpose:</strong>
+  <%= @program.loan_purpose %>
+</p>
+
+<p>
+  <strong>Loan size:</strong>
+  <%= @program.loan_size %>
+</p>
+
+<p>
+  <strong>Loan type:</strong>
+  <%= @program.loan_type %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @program.term %>
+</p>
+
+<p>
+  <strong>Interest rate:</strong>
+  <%= @program.interest_rate %>
+</p>
+
+<p>
+  <strong>Lock period:</strong>
+  <%= @program.lock_period %>
+</p>
+
+<p>
+  <strong>Fannie mae:</strong>
+  <%= @program.fannie_mae %>
+</p>
+
+<p>
+  <strong>Base rate:</strong>
+  <%= @program.base_rate %>
+</p>
+
+<p>
+  <strong>Adjustment rate:</strong>
+  <%= @program.adjustment_rate %>
+</p>
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>

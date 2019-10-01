@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<h1>Programs</h1>
+<table border="1px">
+  <thead>
+    <tr>
+      <th>Loan purpose</th>
+      <th>Loan size</th>
+      <th>Loan type</th>
+      <th>Term</th>
+      <th>Interest rate</th>
+      <th>Lock period</th>
+      <th>Fannie mae</th>
+      <th>Base rate</th>
+      <th>Adjustment rate</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @programs.each do |program| %>
+      <tr>
+        <td><%= program.loan_purpose %></td>
+        <td><%= program.loan_size %></td>
+        <td><%= program.loan_type %></td>
+        <td><%= program.term %></td>
+        <td><%= program.interest_rate %></td>
+        <td><%= program.lock_period %></td>
+        <td><%= program.fannie_mae %></td>
+        <td><%= program.base_rate %></td>
+        <td><%= program.adjustment_rate %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<div align="center">
+  <%= form_tag(import_programs_path, :multipart => true) do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
+</div>
